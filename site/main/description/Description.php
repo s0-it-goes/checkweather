@@ -34,16 +34,16 @@ class Description
 
     public function getTemp(): string
     {
-        $temp = 'Температура воздуха ' . $this->data['main']['temp'];
-        
-        return $temp;
+        $temp =  (string) round($this->data['main']['temp'], 1, PHP_ROUND_HALF_UP);
+        $temp = str_replace('.', ',', $temp);
+        return 'Температура воздуха ' . $temp;
     }
 
     public function getFeelsLike(): string
     {
-        $feels_like = 'ощущается как ' . $this->data['main']['feels_like'];
-
-        return $feels_like;
+        $feels_like =  (string) round($this->data['main']['feels_like'], 1, PHP_ROUND_HALF_UP);
+        $feels_like = str_replace('.', ',', $feels_like);
+        return 'ощущается как ' . $feels_like;
     }
 
     public function getWind(): array
