@@ -1,5 +1,5 @@
 <?php
-    require_once '/var/www/main/description/descriptionHelper.php';
+    require_once '/var/www/app/description/information.php';
 ?>
 
 <!DOCTYPE html>

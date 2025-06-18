@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace App\Data;
 class Response
 {
     private string $url = 'https://api.openweathermap.org/data/2.5/weather';

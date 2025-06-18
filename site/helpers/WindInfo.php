@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-require_once '/var/www/main/data/Data.php';
+namespace helpers;
+
+require_once '/var/www/app/Data/Data.php';
+use App\Data\Data;
 
 class WindInfo
 {

@@ -2,7 +2,12 @@
 
 declare(strict_types=1);
 
-require_once '/var/www/main/description/Description.php';
+namespace App\description;
+
+require_once '/var/www/app/Data/Data.php';
+require_once '/var/www/app/description/Description.php';
+
+use App\Data\Data;
 
 $Des = new Description(new Data);
 

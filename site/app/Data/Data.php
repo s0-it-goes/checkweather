@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once '/var/www/main/data/Response.php';
+namespace App\Data;
 
 class Data
 {

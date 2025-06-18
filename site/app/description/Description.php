@@ -2,9 +2,19 @@
 
 declare(strict_types=1);
 
-require_once '/var/www/main/data/Data.php';
-require_once '/var/www/main/helpers/DateHandler.php';
-require_once '/var/www/main/helpers/WindInfo.php';
+namespace App\description;
+
+spl_autoload_register(
+    function($class) {
+        $path = '/var/www/' . lcfirst(
+            str_replace('\\', '/', $class) . '.php');
+        require $path;
+    }
+);
+
+use App\Data\Data;
+use helpers\WindInfo;
+use helpers\DateHandler;
 
 class Description
 {
@@ -77,8 +87,8 @@ class Description
     public function getIcon()
     {
         $iconId = $this->data['weather'][0]['icon'];
-        $icon = "<img src='images/$iconId.png' style='width: 40px; padding: 0px '>";
-
+        $icon = "<img src='../files/images/$iconId.png' style='width: 40px; padding: 0px '>";
+        var_dump(is_file("../files/images/$iconId.png"));
         return $icon;
     }
 }
