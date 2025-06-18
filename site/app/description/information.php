@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace App\description;
 
-require_once '/var/www/app/Data/Data.php';
-require_once '/var/www/app/description/Description.php';
+spl_autoload_register(function($class){
+    $path = '/var/www/' . lcfirst(str_replace('\\', '/', $class)) . '.php';
+    if(file_exists($path)) {
+        require $path;
+    }
+});
 
 use App\Data\Data;
 

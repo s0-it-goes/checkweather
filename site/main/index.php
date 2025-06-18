@@ -39,7 +39,6 @@
                 endif;
             ?>
         </div>
-        <img src="images/01d.png">
     </div>
 </body>
 </html>
