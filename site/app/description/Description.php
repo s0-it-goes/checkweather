@@ -87,8 +87,8 @@ class Description
     public function getIcon()
     {
         $iconId = $this->data['weather'][0]['icon'];
-        $icon = "<img src='../files/images/$iconId.png' style='width: 40px; padding: 0px '>";
-        var_dump(is_file("../files/images/$iconId.png"));
+        $icon = "<img src='images/$iconId.png' style='width: 40px; padding: 0px '>";
+        
         return $icon;
     }
 }
