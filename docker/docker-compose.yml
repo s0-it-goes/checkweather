@@ -1,10 +1,15 @@
 services:
-  php:
-    image: php:8.3-fpm
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: php_and_composer
     restart: always
     working_dir: /var/www
     volumes:
       - ../site:/var/www
+      - ./php/php-edited.ini:/usr/local/etc/php/php.ini
+      
   nginx:
     image: nginx:latest
     restart: always

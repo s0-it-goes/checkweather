@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace helpers;
 
 require_once '/var/www/app/Data/Data.php';
+
 use App\Data\Data;
 
 class WindInfo
