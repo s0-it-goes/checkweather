@@ -16,7 +16,7 @@ class Data
     }
     
 
-    public function getData(): mixed 
+    public function getData(): mixed
     {
         $data = json_decode($this->response, true);
 
@@ -32,5 +32,10 @@ class Data
         $this->ResponseObject->closeCurl();
 
         return $data;
+    }
+
+    public function __invoke()
+    {
+        return $this->getData();
     }
 }

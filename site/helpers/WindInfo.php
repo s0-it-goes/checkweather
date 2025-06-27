@@ -14,7 +14,7 @@ class WindInfo
 
     public function __construct(private Data $DataObject) 
     {
-        $this->data = $this->DataObject->getData();
+        $this->data = $DataObject();
     }
 
     public function speed(): int|float

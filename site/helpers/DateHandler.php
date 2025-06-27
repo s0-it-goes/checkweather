@@ -15,7 +15,7 @@ class DateHandler {
 
     public function __construct(private Data $DataObject)
     {
-        $this->data = $this->DataObject->getData();
+        $this->data = $DataObject();
         $this->sunrise = $this->data['sys']['sunrise'] + $this->data['timezone'];
         $this->sunset = $this->data['sys']['sunset'] + $this->data['timezone'];
     }
